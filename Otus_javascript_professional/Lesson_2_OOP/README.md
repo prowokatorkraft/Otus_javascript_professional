@@ -14,4 +14,4 @@
    * Покрыть функцию тестами (минимум 5 тестов на разные случаи: примитивы, массивы, вложенные объекты, циклические ссылки, сравнение разных типов).
 
 1.<b>Результат:</b>
-![deepEqual](https://github.com/prowokatorkraft/Otus_javascript_professional/Image/2025-11-15_21h33_43.png)</br>
+![deepEqual](https://github.com/prowokatorkraft/Otus_javascript_professional/blob/master/Otus_javascript_professional/Image/2025-11-15_21h33_43.png?raw=true)</br>
