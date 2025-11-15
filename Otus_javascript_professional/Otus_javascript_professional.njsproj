@@ -28,12 +28,21 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="Image\2025-11-15_21h33_43.png" />
     <Content Include="Lesson_2_OOP\app.js" />
+    <Content Include="Lesson_2_OOP\Comparator\ArrayComparator.js" />
+    <Content Include="Lesson_2_OOP\Comparator\Comparator.js" />
+    <Content Include="Lesson_2_OOP\Comparator\ComparatorAbstract.js" />
+    <Content Include="Lesson_2_OOP\Comparator\ObjectComparator.js" />
+    <Content Include="Lesson_2_OOP\Comparator\PrimitiveComparator.js" />
+    <Content Include="Lesson_2_OOP\README.md" />
     <Content Include="package.json" />
     <Content Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Lesson_2_OOP\" />
+    <Folder Include="Lesson_2_OOP\Comparator\" />
+    <Folder Include="Image\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
 </Project>

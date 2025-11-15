@@ -1,3 +1,5 @@
-# Otus_javascript_professional
+# JavaScript Developer. Professional
+
+![JavaScript Developer. Professional](https://otus.ru/lessons/javascript-professional/)</br>
 
 
