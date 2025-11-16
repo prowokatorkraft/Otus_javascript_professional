@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34714.143
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "Otus_javascript_professional", "Otus_javascript_professional\Otus_javascript_professional.njsproj", "{EDD4FEDE-0AF6-4865-924D-096992BE9D6C}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson_2_OOP", "Lesson_2_OOP", "{786AEAE3-3F44-49E7-BCFC-43766C9B924D}"
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "Lesson_2_OOP", "Otus_javascript_professional\Lesson_2_OOP.njsproj", "{EDD4FEDE-0AF6-4865-924D-096992BE9D6C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,9 +18,6 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{EDD4FEDE-0AF6-4865-924D-096992BE9D6C} = {786AEAE3-3F44-49E7-BCFC-43766C9B924D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {87C0D059-C6BB-47B2-B0C7-686A31079A7B}
