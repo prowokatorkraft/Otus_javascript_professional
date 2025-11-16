@@ -5,6 +5,8 @@ VisualStudioVersion = 17.9.34714.143
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "Lesson_2_OOP", "Lesson_2_OOP\Lesson_2_OOP.njsproj", "{EDD4FEDE-0AF6-4865-924D-096992BE9D6C}"
 EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "Lesson_4_Type_Script", "Lesson_4_Type_Script\Lesson_4_Type_Script.njsproj", "{10186F6A-9FC3-4767-9DD3-B4245F85FFB2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{EDD4FEDE-0AF6-4865-924D-096992BE9D6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EDD4FEDE-0AF6-4865-924D-096992BE9D6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EDD4FEDE-0AF6-4865-924D-096992BE9D6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10186F6A-9FC3-4767-9DD3-B4245F85FFB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10186F6A-9FC3-4767-9DD3-B4245F85FFB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10186F6A-9FC3-4767-9DD3-B4245F85FFB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10186F6A-9FC3-4767-9DD3-B4245F85FFB2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
