@@ -11,7 +11,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>edd4fede-0af6-4865-924d-096992be9d6c</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Lesson_2_OOP\app.js</StartupFile>
+    <StartupFile>app.js</StartupFile>
     <StartWebBrowser>False</StartWebBrowser>
     <SearchPath>
     </SearchPath>
@@ -28,21 +28,19 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="Image\2025-11-15_21h33_43.png" />
-    <Content Include="Lesson_2_OOP\app.js" />
-    <Content Include="Lesson_2_OOP\Comparator\ArrayComparator.js" />
-    <Content Include="Lesson_2_OOP\Comparator\Comparator.js" />
-    <Content Include="Lesson_2_OOP\Comparator\ComparatorAbstract.js" />
-    <Content Include="Lesson_2_OOP\Comparator\ObjectComparator.js" />
-    <Content Include="Lesson_2_OOP\Comparator\PrimitiveComparator.js" />
-    <Content Include="Lesson_2_OOP\README.md" />
-    <Content Include="package.json" />
+    <Content Include="Images\2025-11-15_21h33_43.png" />
+    <Content Include="app.js" />
+    <Content Include="Comparator\ArrayComparator.js" />
+    <Content Include="Comparator\Comparator.js" />
+    <Content Include="Comparator\ComparatorAbstract.js" />
+    <Content Include="Comparator\ObjectComparator.js" />
+    <Content Include="Comparator\PrimitiveComparator.js" />
     <Content Include="README.md" />
+    <Content Include="package.json" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Lesson_2_OOP\" />
-    <Folder Include="Lesson_2_OOP\Comparator\" />
-    <Folder Include="Image\" />
+    <Folder Include="Comparator\" />
+    <Folder Include="Images\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
 </Project>

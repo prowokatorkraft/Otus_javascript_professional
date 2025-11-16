@@ -48,4 +48,3 @@ console.log(comparator.compare(
 ));
 
 console.log("Tests finished.");
-console.log("Tests finished.");
