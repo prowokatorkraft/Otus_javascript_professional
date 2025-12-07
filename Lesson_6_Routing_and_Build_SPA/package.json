@@ -1,0 +1,14 @@
+{
+  "name": "lesson_6_routing_and_build_spa",
+  "version": "0.0.0",
+  "description": "Lesson_6_Routing_and_Build_SPA",
+  "main": "server.js",
+  "author": {
+    "name": ""
+  },
+  "devDependencies": {
+    "eslint": "^8.21.0"
+  },
+  "eslintConfig": {
+  }
+}
