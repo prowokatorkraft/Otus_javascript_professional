@@ -3,10 +3,10 @@ function render(root, store) {
     const state = store.getState();
     let totalCost = 0;
     for (var cost of state.incomes) {
-        totalCost += cost;
+        totalCost += cost.value;
     }
     for (var cost of state.expenses) {
-        totalCost -= cost;
+        totalCost -= cost.value;
     }
 
     const costContainer = document.createElement("div");
@@ -18,7 +18,7 @@ function render(root, store) {
 
     const value = document.createElement("span");
     value.style = "color: #d35400;";
-    value.textContent = `${totalCost}`;
+    value.textContent = totalCost.toFixed(2);
 
     costContainer.appendChild(label);
     costContainer.appendChild(value);

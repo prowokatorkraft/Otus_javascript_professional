@@ -4,11 +4,7 @@ import { Income } from './Routers/Income.js';
 import { Expense } from './Routers/Expense.js';
 import { reducer, configureStore } from './Store.js';
 
-const state = {
-    incomes: [ 1223.6, 84.09 ],
-    expenses: [ 226.4, 75.83, 4.66 ]
-};
-const store = configureStore(reducer, state);
+const store = configureStore(reducer);
 
 let removeSubscribe = () => { };
 const createRender = (route) => (...args) => {
@@ -18,15 +14,16 @@ const createRender = (route) => (...args) => {
 
 const router = Router();
 
-router.on(/.*/, createRender(Budget)); // budget
+router.on('/', createRender(Budget));
 router.on("/income", createRender(Income));
 router.on("/expense", createRender(Expense));
 
 document.body.addEventListener("click", (event) => {
-    if (!event.target.matches("a")) {
+    let link = event.target.closest("a");
+    if (!link) {
         return;
     }
     event.preventDefault();
-    let url = event.target.getAttribute("href");
+    let url = link.getAttribute("href");
     router.go(url);
 });

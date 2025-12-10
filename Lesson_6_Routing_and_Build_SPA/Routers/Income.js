@@ -1,14 +1,15 @@
 let counter = 1;
 
-function addRow(value, store) {
+function addRow(state, store) {
     const row = document.createElement('div');
     row.style = 'transition: opacity 0.3s, max-height 0.3s; opacity: 1; max - height: 40px; ';
-    row.textContent = counter + '. +' + value;
+    row.setAttribute('id', state.id);
+    row.textContent = counter + '. +' + state.value;
 
     row.addEventListener('click', () => {
         const confirmDelete = confirm('Do you want to remove this cost?');
         if (confirmDelete) {
-            store.dispatch({ type: 'del-income', payload: value });
+            store.dispatch({ type: 'del-income', payload: state.id });
         }
     });
 
