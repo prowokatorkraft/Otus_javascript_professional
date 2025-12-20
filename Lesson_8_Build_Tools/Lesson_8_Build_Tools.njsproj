@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>Lesson_8_Build_Tools</Name>
+    <RootNamespace>Lesson_8_Build_Tools</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>d42549d0-c725-45df-9a47-75e8e9fb1cd2</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>
+    </StartupFile>
+    <StartWebBrowser>True</StartWebBrowser>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <NodejsPort>1337</NodejsPort>
+    <EnableTypeScript>true</EnableTypeScript>
+    <StartWebBrowser>true</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Lesson_8_Build_Tools\.gitignore" />
+    <Content Include="Lesson_8_Build_Tools\.prettierrc">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Lesson_8_Build_Tools\eslint.config.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Lesson_8_Build_Tools\index.html" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\%40esbuild\win32-x64\esbuild.exe" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\%40esbuild\win32-x64\package.json" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\%40esbuild\win32-x64\README.md" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\%40rollup\rollup-win32-x64-gnu\package.json" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\%40rollup\rollup-win32-x64-gnu\README.md" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\%40rollup\rollup-win32-x64-gnu\rollup.win32-x64-gnu.node" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\%40rollup\rollup-win32-x64-msvc\package.json" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\%40rollup\rollup-win32-x64-msvc\README.md" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\%40rollup\rollup-win32-x64-msvc\rollup.win32-x64-msvc.node" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\%40types\estree\LICENSE" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\%40types\estree\package.json" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\%40types\estree\README.md" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\.bin\esbuild" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\.bin\esbuild.cmd" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\.bin\esbuild.ps1" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\.bin\nanoid" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\.bin\nanoid.cmd" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\.bin\nanoid.ps1" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\.bin\rollup" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\.bin\rollup.cmd" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\.bin\rollup.ps1" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\.bin\tsc" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\.bin\tsc.cmd" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\.bin\tsc.ps1" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\.bin\tsserver" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\.bin\tsserver.cmd" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\.bin\tsserver.ps1" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\.bin\vite" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\.bin\vite.cmd" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\.bin\vite.ps1" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\.package-lock.json" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\.vite\deps\package.json" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\.vite\deps\_metadata.json" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\esbuild\bin\esbuild" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\esbuild\install.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\esbuild\lib\main.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\esbuild\LICENSE.md" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\esbuild\package.json" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\esbuild\README.md" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\fdir\dist\index.cjs" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\fdir\dist\index.d.cts" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\fdir\dist\index.d.mts" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\fdir\dist\index.mjs" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\fdir\LICENSE" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\fdir\package.json" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\fdir\README.md" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\nanoid\async\index.browser.cjs" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\nanoid\async\index.browser.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\nanoid\async\index.cjs" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\nanoid\async\index.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\nanoid\async\index.native.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\nanoid\async\package.json" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\nanoid\bin\nanoid.cjs" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\nanoid\index.browser.cjs" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\nanoid\index.browser.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\nanoid\index.cjs" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\nanoid\index.d.cts" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\nanoid\index.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\nanoid\LICENSE" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\nanoid\nanoid.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\nanoid\non-secure\index.cjs" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\nanoid\non-secure\index.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\nanoid\non-secure\package.json" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\nanoid\package.json" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\nanoid\README.md" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\nanoid\url-alphabet\index.cjs" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\nanoid\url-alphabet\index.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\nanoid\url-alphabet\package.json" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\picocolors\LICENSE" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\picocolors\package.json" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\picocolors\picocolors.browser.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\picocolors\picocolors.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\picocolors\README.md" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\picomatch\index.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\picomatch\lib\constants.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\picomatch\lib\parse.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\picomatch\lib\picomatch.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\picomatch\lib\scan.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\picomatch\lib\utils.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\picomatch\LICENSE" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\picomatch\package.json" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\picomatch\posix.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\picomatch\README.md" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\postcss\lib\at-rule.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\postcss\lib\comment.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\postcss\lib\container.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\postcss\lib\css-syntax-error.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\postcss\lib\declaration.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\postcss\lib\document.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\postcss\lib\fromJSON.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\postcss\lib\input.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\postcss\lib\lazy-result.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\postcss\lib\list.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\postcss\lib\map-generator.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\postcss\lib\no-work-result.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\postcss\lib\node.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\postcss\lib\parse.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\postcss\lib\parser.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\postcss\lib\postcss.d.mts" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\postcss\lib\postcss.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\postcss\lib\postcss.mjs" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\postcss\lib\previous-map.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\postcss\lib\processor.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\postcss\lib\result.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\postcss\lib\root.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\postcss\lib\rule.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\postcss\lib\stringifier.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\postcss\lib\stringify.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\postcss\lib\symbols.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\postcss\lib\terminal-highlight.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\postcss\lib\tokenize.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\postcss\lib\warn-once.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\postcss\lib\warning.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\postcss\LICENSE" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\postcss\package.json" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\postcss\README.md" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\rollup\dist\bin\rollup" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\rollup\dist\es\getLogFilter.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\rollup\dist\es\package.json" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\rollup\dist\es\parseAst.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\rollup\dist\es\rollup.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\rollup\dist\es\shared\node-entry.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\rollup\dist\es\shared\parseAst.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\rollup\dist\es\shared\watch.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\rollup\dist\getLogFilter.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\rollup\dist\loadConfigFile.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\rollup\dist\native.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\rollup\dist\parseAst.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\rollup\dist\rollup.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\rollup\dist\shared\fsevents-importer.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\rollup\dist\shared\index.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\rollup\dist\shared\loadConfigFile.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\rollup\dist\shared\parseAst.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\rollup\dist\shared\rollup.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\rollup\dist\shared\watch-cli.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\rollup\dist\shared\watch.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\rollup\LICENSE.md" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\rollup\package.json" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\rollup\README.md" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\source-map-js\lib\array-set.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\source-map-js\lib\base64-vlq.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\source-map-js\lib\base64.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\source-map-js\lib\binary-search.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\source-map-js\lib\mapping-list.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\source-map-js\lib\quick-sort.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\source-map-js\lib\source-map-consumer.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\source-map-js\lib\source-map-generator.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\source-map-js\lib\source-node.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\source-map-js\lib\util.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\source-map-js\LICENSE" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\source-map-js\package.json" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\source-map-js\README.md" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\source-map-js\source-map.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\tinyglobby\dist\index.cjs" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\tinyglobby\dist\index.d.cts" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\tinyglobby\dist\index.d.mts" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\tinyglobby\dist\index.mjs" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\tinyglobby\LICENSE" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\tinyglobby\package.json" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\tinyglobby\README.md" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\typescript\bin\tsc" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\typescript\bin\tsserver" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\typescript\lib\cs\diagnosticMessages.generated.json" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\typescript\lib\de\diagnosticMessages.generated.json" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\typescript\lib\es\diagnosticMessages.generated.json" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\typescript\lib\fr\diagnosticMessages.generated.json" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\typescript\lib\it\diagnosticMessages.generated.json" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\typescript\lib\ja\diagnosticMessages.generated.json" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\typescript\lib\ko\diagnosticMessages.generated.json" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\typescript\lib\pl\diagnosticMessages.generated.json" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\typescript\lib\pt-br\diagnosticMessages.generated.json" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\typescript\lib\ru\diagnosticMessages.generated.json" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\typescript\lib\tr\diagnosticMessages.generated.json" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\typescript\lib\tsc.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\typescript\lib\tsserver.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\typescript\lib\tsserverlibrary.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\typescript\lib\typescript.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\typescript\lib\typesMap.json" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\typescript\lib\typingsInstaller.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\typescript\lib\watchGuard.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\typescript\lib\zh-cn\diagnosticMessages.generated.json" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\typescript\lib\zh-tw\diagnosticMessages.generated.json" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\typescript\lib\_tsc.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\typescript\lib\_tsserver.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\typescript\lib\_typingsInstaller.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\typescript\LICENSE.txt" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\typescript\package.json" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\typescript\README.md" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\typescript\SECURITY.md" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\typescript\ThirdPartyNoticeText.txt" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\vite\bin\openChrome.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\vite\bin\vite.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\vite\dist\client\client.mjs" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\vite\dist\client\env.mjs" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\vite\dist\node\chunks\build.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\vite\dist\node\chunks\build2.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\vite\dist\node\chunks\chunk.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\vite\dist\node\chunks\config.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\vite\dist\node\chunks\config2.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\vite\dist\node\chunks\dist.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\vite\dist\node\chunks\lib.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\vite\dist\node\chunks\logger.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\vite\dist\node\chunks\optimizer.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\vite\dist\node\chunks\postcss-import.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\vite\dist\node\chunks\preview.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\vite\dist\node\chunks\server.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\vite\dist\node\cli.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\vite\dist\node\index.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\vite\dist\node\module-runner.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\vite\LICENSE.md" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\vite\misc\false.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\vite\misc\true.js" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\vite\package.json" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\vite\README.md" />
+    <Content Include="Lesson_8_Build_Tools\node_modules\vite\types\package.json" />
+    <Content Include="Lesson_8_Build_Tools\package-lock.json" />
+    <Content Include="Lesson_8_Build_Tools\package.json" />
+    <Content Include="Lesson_8_Build_Tools\public\vite.svg" />
+    <Content Include="Lesson_8_Build_Tools\src\style.css" />
+    <Content Include="Lesson_8_Build_Tools\src\typescript.svg" />
+    <Content Include="Lesson_8_Build_Tools\tsconfig.json" />
+    <Content Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Lesson_8_Build_Tools\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\%40esbuild\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\%40esbuild\win32-x64\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\%40rollup\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\%40rollup\rollup-win32-x64-gnu\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\%40rollup\rollup-win32-x64-msvc\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\%40types\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\%40types\estree\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\.bin\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\.vite\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\.vite\deps\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\esbuild\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\esbuild\bin\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\esbuild\lib\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\fdir\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\fdir\dist\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\nanoid\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\nanoid\async\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\nanoid\bin\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\nanoid\non-secure\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\nanoid\url-alphabet\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\picocolors\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\picomatch\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\picomatch\lib\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\postcss\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\postcss\lib\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\rollup\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\rollup\dist\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\rollup\dist\bin\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\rollup\dist\es\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\rollup\dist\es\shared\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\rollup\dist\shared\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\source-map-js\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\source-map-js\lib\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\tinyglobby\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\tinyglobby\dist\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\typescript\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\typescript\bin\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\typescript\lib\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\typescript\lib\cs\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\typescript\lib\de\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\typescript\lib\es\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\typescript\lib\fr\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\typescript\lib\it\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\typescript\lib\ja\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\typescript\lib\ko\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\typescript\lib\pl\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\typescript\lib\pt-br\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\typescript\lib\ru\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\typescript\lib\tr\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\typescript\lib\zh-cn\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\typescript\lib\zh-tw\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\vite\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\vite\bin\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\vite\dist\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\vite\dist\client\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\vite\dist\node\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\vite\dist\node\chunks\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\vite\misc\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\vite\types\" />
+    <Folder Include="Lesson_8_Build_Tools\node_modules\vite\types\internal\" />
+    <Folder Include="Lesson_8_Build_Tools\public\" />
+    <Folder Include="Lesson_8_Build_Tools\src\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\%40types\estree\flow.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\%40types\estree\index.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\esbuild\lib\main.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\nanoid\async\index.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\nanoid\index.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\nanoid\non-secure\index.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\picocolors\picocolors.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\picocolors\types.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\postcss\lib\at-rule.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\postcss\lib\comment.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\postcss\lib\container.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\postcss\lib\css-syntax-error.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\postcss\lib\declaration.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\postcss\lib\document.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\postcss\lib\fromJSON.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\postcss\lib\input.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\postcss\lib\lazy-result.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\postcss\lib\list.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\postcss\lib\no-work-result.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\postcss\lib\node.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\postcss\lib\parse.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\postcss\lib\postcss.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\postcss\lib\previous-map.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\postcss\lib\processor.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\postcss\lib\result.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\postcss\lib\root.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\postcss\lib\rule.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\postcss\lib\stringifier.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\postcss\lib\stringify.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\postcss\lib\warning.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\rollup\dist\getLogFilter.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\rollup\dist\loadConfigFile.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\rollup\dist\parseAst.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\rollup\dist\rollup.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\source-map-js\lib\source-map-consumer.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\source-map-js\lib\source-map-generator.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\source-map-js\lib\source-node.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\source-map-js\source-map.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.decorators.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.decorators.legacy.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.dom.asynciterable.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.dom.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.dom.iterable.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2015.collection.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2015.core.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2015.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2015.generator.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2015.iterable.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2015.promise.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2015.proxy.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2015.reflect.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2015.symbol.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2015.symbol.wellknown.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2016.array.include.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2016.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2016.full.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2016.intl.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2017.arraybuffer.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2017.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2017.date.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2017.full.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2017.intl.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2017.object.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2017.sharedmemory.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2017.string.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2017.typedarrays.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2018.asyncgenerator.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2018.asynciterable.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2018.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2018.full.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2018.intl.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2018.promise.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2018.regexp.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2019.array.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2019.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2019.full.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2019.intl.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2019.object.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2019.string.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2019.symbol.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2020.bigint.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2020.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2020.date.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2020.full.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2020.intl.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2020.number.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2020.promise.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2020.sharedmemory.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2020.string.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2020.symbol.wellknown.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2021.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2021.full.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2021.intl.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2021.promise.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2021.string.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2021.weakref.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2022.array.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2022.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2022.error.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2022.full.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2022.intl.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2022.object.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2022.regexp.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2022.string.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2023.array.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2023.collection.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2023.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2023.full.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2023.intl.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2024.arraybuffer.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2024.collection.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2024.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2024.full.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2024.object.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2024.promise.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2024.regexp.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2024.sharedmemory.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es2024.string.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es5.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.es6.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.esnext.array.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.esnext.collection.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.esnext.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.esnext.decorators.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.esnext.disposable.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.esnext.error.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.esnext.float16.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.esnext.full.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.esnext.intl.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.esnext.iterator.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.esnext.promise.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.esnext.sharedmemory.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.scripthost.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.webworker.asynciterable.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.webworker.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.webworker.importscripts.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\lib.webworker.iterable.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\tsserverlibrary.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\typescript\lib\typescript.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\vite\client.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\vite\dist\node\chunks\moduleRunnerTransport.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\vite\dist\node\index.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\vite\dist\node\module-runner.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\vite\types\customEvent.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\vite\types\hmrPayload.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\vite\types\hot.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\vite\types\import-meta.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\vite\types\importGlob.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\vite\types\importMeta.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\vite\types\internal\cssPreprocessorOptions.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\vite\types\internal\lightningcssOptions.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\vite\types\internal\terserOptions.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\node_modules\vite\types\metadata.d.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\src\counter.ts" />
+    <TypeScriptCompile Include="Lesson_8_Build_Tools\src\main.ts" />
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

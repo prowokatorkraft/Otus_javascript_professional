@@ -9,6 +9,8 @@ Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "Lesson_4_Type_Script", "Les
 EndProject
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "Lesson_6_Routing_and_Build_SPA", "Lesson_6_Routing_and_Build_SPA\Lesson_6_Routing_and_Build_SPA.njsproj", "{D7EB39E3-ED63-4997-BCDD-8E55C5E55866}"
 EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "Lesson_8_Build_Tools", "Lesson_8_Build_Tools\Lesson_8_Build_Tools.njsproj", "{D42549D0-C725-45DF-9A47-75E8E9FB1CD2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{D7EB39E3-ED63-4997-BCDD-8E55C5E55866}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D7EB39E3-ED63-4997-BCDD-8E55C5E55866}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D7EB39E3-ED63-4997-BCDD-8E55C5E55866}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D42549D0-C725-45DF-9A47-75E8E9FB1CD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D42549D0-C725-45DF-9A47-75E8E9FB1CD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D42549D0-C725-45DF-9A47-75E8E9FB1CD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D42549D0-C725-45DF-9A47-75E8E9FB1CD2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
