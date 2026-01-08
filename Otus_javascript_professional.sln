@@ -13,6 +13,8 @@ Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "Lesson_8_Build_Tools", "Les
 EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "Lesson_11_Castom_Hooks", "Lesson_11_Castom_Hooks\Lesson_11_Castom_Hooks.esproj", "{16437C37-5453-48CD-B39D-10CAF9F491A8}"
 EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "Lesson_14_React_Route", "Lesson_14_React_Route\Lesson_14_React_Route.esproj", "{92C89478-CDBF-4A7B-9753-78585318E30A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,12 @@ Global
 		{16437C37-5453-48CD-B39D-10CAF9F491A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{16437C37-5453-48CD-B39D-10CAF9F491A8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{16437C37-5453-48CD-B39D-10CAF9F491A8}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{92C89478-CDBF-4A7B-9753-78585318E30A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92C89478-CDBF-4A7B-9753-78585318E30A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92C89478-CDBF-4A7B-9753-78585318E30A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{92C89478-CDBF-4A7B-9753-78585318E30A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92C89478-CDBF-4A7B-9753-78585318E30A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92C89478-CDBF-4A7B-9753-78585318E30A}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
