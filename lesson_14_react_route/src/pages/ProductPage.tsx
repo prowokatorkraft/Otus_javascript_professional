@@ -1,32 +1,18 @@
 import React from "react";
-// TODO: При добавлении React Router заменить на useLoaderData
-// import { useLoaderData, Link } from 'react-router';
-import { useDispatch } from "react-redux";
+import { useLoaderData, Link } from 'react-router';
+import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../store/cartSlice";
 import { Product } from "../types";
 import styles from "../styles/ProductPage.module.css";
+import { RootState } from "../store";
 
 const ProductPage: React.FC = () => {
-  // TODO: При добавлении React Router получать product из loader'а:
-  // const product = useLoaderData() as Product;
+  const product = useLoaderData() as Product;
 
   const dispatch = useDispatch();
-
-  // Временные данные для демонстрации без роутера
-  const product: Product = {
-    id: 1,
-    title: "Пример товара",
-    description:
-      "Это пример товара для демонстрации страницы без маршрутизации",
-    price: 999,
-    thumbnail: "https://via.placeholder.com/400x300",
-    category: "Электроника",
-    stock: 10,
-    rating: 4.5,
-    discountPercentage: 10,
-    brand: "Example Brand",
-    images: ["https://via.placeholder.com/400x300"],
-  };
+  const cartItem = useSelector((state: RootState) =>
+    state.cart.items.find((item) => item.id === product.id)
+  );
 
   const handleAddToCart = () => {
     if (product) {
@@ -34,22 +20,12 @@ const ProductPage: React.FC = () => {
     }
   };
 
-  const handleGoToCatalog = () => {
-    // TODO: При добавлении React Router использовать навигацию
-    alert("Переход к каталогу будет работать после добавления маршрутизации");
-  };
-
-  const handleGoToCart = () => {
-    // TODO: При добавлении React Router использовать навигацию
-    alert("Переход к корзине будет работать после добавления маршрутизации");
-  };
-
   return (
-    <div className={styles.container}>
-      <nav className={styles.breadcrumbs}>
-        <button onClick={handleGoToCatalog} className={styles.breadcrumbLink}>
+      <div className={styles.container}>
+       <nav className={styles.breadcrumbs}>
+        <Link to="/" className={styles.breadcrumbLink}>
           Каталог
-        </button>
+        </Link>
         <span className={styles.separator}> → </span>
         <span className={styles.current}>{product.title}</span>
       </nav>
@@ -112,17 +88,30 @@ const ProductPage: React.FC = () => {
           </div>
 
           <div className={styles.actions}>
-            <button
-              onClick={handleAddToCart}
-              className={styles.addToCartButton}
-              disabled={product.stock === 0}
-            >
-              {product.stock === 0 ? "Нет в наличии" : "Добавить в корзину"}
-            </button>
+            <div className={styles.addToCartSection}>
+              <button
+                onClick={handleAddToCart}
+                className={styles.addToCartButton}
+                disabled={product.stock === 0}
+              >
+                {product.stock === 0 ? "Нет в наличии" : "Добавить в корзину"}
+              </button>
 
-            <button onClick={handleGoToCart} className={styles.goToCartButton}>
+              {cartItem && (
+                <div className={styles.cartInfo}>
+                  <span className={styles.cartQuantity}>
+                    В корзине: {cartItem.quantity} шт.
+                  </span>
+                  <span className={styles.cartTotal}>
+                    {(cartItem.price * cartItem.quantity).toFixed(2)} ₽
+                  </span>
+                </div>
+              )}
+            </div>
+
+            <Link to="/cart" className={styles.goToCartButton}>
               Перейти в корзину
-            </button>
+            </Link>
           </div>
         </div>
       </div>

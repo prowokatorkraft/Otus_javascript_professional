@@ -1,9 +1,11 @@
 ﻿import React from "react";
+import { Link, NavLink, useLocation } from "react-router";
 import { useSelector } from "react-redux";
 import { RootState } from "../store";
 import styles from "../styles/Header.module.css";
 
 const Header: React.FC = () => {
+  const location = useLocation();
   const { totalQuantity, totalAmount } = useSelector(
     (state: RootState) => state.cart
   );
@@ -11,20 +13,30 @@ const Header: React.FC = () => {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        <div className={styles.logo}>
+        <Link to="/" className={styles.logo}>
           <h1 className={styles.title}>🛒 Shop App</h1>
-        </div>
+        </Link>
 
         <nav className={styles.nav}>
-          <button className={`${styles.navLink} ${styles.active}`}>
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              `${styles.navLink} ${isActive ? styles.active : ""}`
+            }
+          >
             Каталог
-          </button>
-          <button className={styles.navLink}>
+          </NavLink>
+          <NavLink
+            to="/cart"
+            className={({ isActive }) =>
+              `${styles.navLink} ${isActive ? styles.active : ""}`
+            }
+          >
             Корзина
             {totalQuantity > 0 && (
               <span className={styles.cartBadge}>{totalQuantity}</span>
             )}
-          </button>
+          </NavLink>
         </nav>
 
         <div className={styles.cartInfo}>

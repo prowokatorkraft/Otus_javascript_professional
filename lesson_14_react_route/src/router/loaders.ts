@@ -1,9 +1,3 @@
-// TODO: Здесь будут loader функции для React Router v7
-// При добавлении маршрутизации создать loader'ы здесь
-
-/*
-Будущие loader'ы:
-
 import { LoaderFunctionArgs } from 'react-router';
 import { Product } from '../types';
 
@@ -25,4 +19,3 @@ export async function productLoader({ params }: LoaderFunctionArgs): Promise<Pro
   }
   return response.json();
 }
-*/

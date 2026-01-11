@@ -4,6 +4,7 @@ import { RootState } from "../store";
 import { addToCart } from "../store/cartSlice";
 import { Product } from "../types";
 import styles from "../styles/ProductCard.module.css";
+import { Link } from "react-router";
 
 interface ProductCardProps {
   product: Product;
@@ -19,24 +20,19 @@ const ProductCard = ({ product }: ProductCardProps) => {
     dispatch(addToCart(product));
   };
 
-  const handleShowDetails = () => {
-    // TODO: При добавлении React Router здесь будет навигация к /product/:id
-    alert(`Детали товара: ${product.title}\nОписание: ${product.description}`);
-  };
-
   return (
     <div className={styles.card}>
-      <div className={styles.imageLink} onClick={handleShowDetails}>
+      <Link to={`/product/${product.id}`} className={styles.imageLink}>
         <img
           src={product.thumbnail}
           alt={product.title}
           className={styles.image}
         />
-      </div>
+      </Link>
       <div className={styles.content}>
-        <div className={styles.titleLink} onClick={handleShowDetails}>
+        <Link to={`/product/${product.id}`} className={styles.titleLink}>
           <h3 className={styles.title}>{product.title}</h3>
-        </div>
+        </Link>
         <p className={styles.price}>{product.price} ₽</p>
         <p className={styles.description}>{product.description}</p>
       </div>
@@ -44,9 +40,9 @@ const ProductCard = ({ product }: ProductCardProps) => {
         <button onClick={handleAddToCart} className={styles.addButton}>
           Добавить в корзину
         </button>
-        <button onClick={handleShowDetails} className={styles.detailButton}>
+        <Link to={`/product/${product.id}`} className={styles.detailButton}>
           Подробнее
-        </button>
+        </Link>
         {cartItem && (
           <span className={styles.quantity}>{cartItem.quantity}</span>
         )}

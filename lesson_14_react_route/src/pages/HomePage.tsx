@@ -1,17 +1,15 @@
 import React from "react";
-// TODO: При добавлении React Router заменить на useLoaderData
-// import { useLoaderData } from 'react-router';
+import { useLoaderData } from 'react-router';
 import ProductCatalog from "../components/ProductCatalog";
 import styles from "../styles/App.module.css";
+import { Product } from "../types";
 
 const HomePage: React.FC = () => {
-  // TODO: При добавлении React Router получать products из loader'а:
-  // const products = useLoaderData() as Product[];
+  const products = useLoaderData() as Product[];
 
   return (
     <div className={styles.pageContainer}>
-      {/* TODO: При добавлении React Router передать products как пропс */}
-      <ProductCatalog />
+      <ProductCatalog products={products} />
     </div>
   );
 };
