@@ -1,64 +1,42 @@
 ﻿import { describe, it, expect } from 'vitest';
-import { render, screen, waitForElementToBeRemoved } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+import { render, screen } from '@testing-library/react';
 import Counter from './Counter';
+import { getAndCheckInDocument, findAndCheckInDocument, clickAndWaitSpiner } from '../helpers/testUtils';
 
 describe('Counter', () => {
   const decreaseBtnName = 'Decrease';
   const increaseBtnName = 'Increase';
   const countText = 'count is';
   const spinerText = 'Calculating ...';
-  const waitSpiner = async () => {
-    if (screen.queryByText(spinerText)) {
-      await waitForElementToBeRemoved(() => {
-        return screen.queryByText(spinerText);
-      }, { timeout: 1000 });
-    }
-  };
 
   it('renders correctly', () => {
     render(<Counter />);
 
-    const countInfo = screen.getByText(countText + ' 0');
-    expect(countInfo).toBeInTheDocument();
-
-    const decreaseButton = screen.getByText(decreaseBtnName);
-    expect(decreaseButton).toBeInTheDocument();
-
-    const increaseButton = screen.getByText(increaseBtnName);
-    expect(increaseButton).toBeInTheDocument();
+    getAndCheckInDocument(countText + ' 0');
+    getAndCheckInDocument(decreaseBtnName);
+    getAndCheckInDocument(increaseBtnName);
   });
 
   it('decrease from 0 to -1', async () => {
     render(<Counter initialCount={0} />);
-
-    const countInfo = screen.getByText(countText + ' 0');
-    expect(countInfo).toBeInTheDocument();
-
-    const decreaseButton = screen.getByText(decreaseBtnName);
-    expect(decreaseButton).toBeInTheDocument();
+    const countInfo = getAndCheckInDocument(countText + ' 0');
+    const decreaseButton = getAndCheckInDocument(decreaseBtnName);
     expect(decreaseButton).toBeDisabled();
 
-    await userEvent.click(decreaseButton)
-    await waitSpiner();
-    expect(countInfo.textContent).equal(countText + ' 0')
+    await clickAndWaitSpiner(decreaseButton, spinerText);
+    expect(countInfo).toHaveTextContent('count is 0')
   });
 
   it('decrease from 4 to 0', async () => {
     render(<Counter initialCount={4} />);
+    getAndCheckInDocument(countText + ' 4');
+    const decreaseButton = getAndCheckInDocument(decreaseBtnName);
 
-    const countInfo = screen.getByText(countText + ' 4');
-    expect(countInfo).toBeInTheDocument();
+    for (let i = 4; i >= 0; i--) {
+      await clickAndWaitSpiner(decreaseButton, spinerText);
 
-    const decreaseButton = screen.getByText(decreaseBtnName);
-    expect(decreaseButton).toBeInTheDocument();
-
-    for (let i = 3; i >= -1; i--) {
-      await userEvent.click(decreaseButton)
-      await waitSpiner();
-
-      const updatedCountInfo = screen.queryByText(countText + ` ${i}`);
-      if (i >= 0) {
+      const updatedCountInfo = screen.queryByText(countText + ` ${i - 1}`);
+      if (i >= 1) {
         expect(updatedCountInfo).toBeInTheDocument();
       }
       else {
@@ -69,33 +47,22 @@ describe('Counter', () => {
 
   it('increase from 0 to 3', async () => {
     render(<Counter initialCount={0} />);
-
-    const countInfo = screen.getByText(countText + ' 0');
-    expect(countInfo).toBeInTheDocument();
-
-    const increaseButton = screen.getByText(increaseBtnName);
-    expect(increaseButton).toBeInTheDocument();
+    getAndCheckInDocument(countText + ' 0');
+    const increaseButton = getAndCheckInDocument(increaseBtnName);
 
     for (let i = 1; i < 4; i++) {
-      await userEvent.click(increaseButton)
-      await waitSpiner();
-
-      const updatedCountInfo = screen.queryByText(countText + ` ${i}`);
-      expect(updatedCountInfo).toBeInTheDocument();
+      await clickAndWaitSpiner(increaseButton, spinerText);
+      findAndCheckInDocument(countText + ` ${i}`);
     }
   });
 
   it('spinner on', async () => {
     render(<Counter initialLoading={true} />);
-
-    const spinner = screen.queryByText(spinerText);
-    expect(spinner).toBeInTheDocument();
+    getAndCheckInDocument(spinerText);
   });
 
   it('spinner off', async () => {
     render(<Counter initialLoading={false} />);
-
-    const spinner = screen.queryByText(spinerText);
-    expect(spinner).not.toBeInTheDocument();
+    findAndCheckInDocument(spinerText, false);
   });
 });
