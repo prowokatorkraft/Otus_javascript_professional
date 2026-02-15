@@ -12,4 +12,5 @@
 	* Передать данные на сервере и отрендерить их на странице (fetch/useAsyncData).
 
 1. <b>Результат:</b>
-	* ![deepEqual](https://github.com/prowokatorkraft/Otus_javascript_professional/blob/master/lesson_20_nuxt/public/2025-11-15_21h33_43.png?raw=true)</br>
+	* ![deepEqual](https://github.com/prowokatorkraft/Otus_javascript_professional/blob/master/lesson_20_nuxt/public/2026-02-15_17h23_56.png)</br>
+	
