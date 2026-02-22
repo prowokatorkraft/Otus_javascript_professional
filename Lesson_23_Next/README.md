@@ -13,5 +13,6 @@
 	* Задеплоить приложение (Vercel/Netlify) и приложить ссылку в README/PR.
 
 1. <b>Результат:</b>
-	* ![result_1](https://github.com/prowokatorkraft/Otus_javascript_professional/blob/master/lesson_23_next/public/2026-02-22_19h39_02.png?raw=true)</br>
-	* ![result_2](https://github.com/prowokatorkraft/Otus_javascript_professional/blob/master/lesson_23_next/public/2026-02-22_19h39_22.png?raw=true)</br>
+	* [Открыть сайт](https://otusnext.vercel.app/)
+ 	* ![result_1](https://github.com/prowokatorkraft/Otus_javascript_professional/blob/master/Lesson_23_Next/lesson_23_next/public/2026-02-22_19h39_02.png?raw=true)</br>
+	* ![result_2](https://github.com/prowokatorkraft/Otus_javascript_professional/blob/master/Lesson_23_Next/lesson_23_next/public/2026-02-22_19h39_22.png?raw=true)</br>
