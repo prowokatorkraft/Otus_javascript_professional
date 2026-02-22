@@ -21,6 +21,8 @@ Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "Lesson_18_Vue", "Lesson_18_
 EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "Lesson_20_Nuxt", "Lesson_20_Nuxt\Lesson_20_Nuxt.esproj", "{25E44BD4-BE21-489E-B52F-B0E8C8A5FAE8}"
 EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "Lesson_23_Next", "Lesson_23_Next\Lesson_23_Next.esproj", "{AA4B23E1-0974-4E9F-8546-C6B9858F1FE2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,6 +75,12 @@ Global
 		{25E44BD4-BE21-489E-B52F-B0E8C8A5FAE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{25E44BD4-BE21-489E-B52F-B0E8C8A5FAE8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{25E44BD4-BE21-489E-B52F-B0E8C8A5FAE8}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{AA4B23E1-0974-4E9F-8546-C6B9858F1FE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA4B23E1-0974-4E9F-8546-C6B9858F1FE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA4B23E1-0974-4E9F-8546-C6B9858F1FE2}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{AA4B23E1-0974-4E9F-8546-C6B9858F1FE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA4B23E1-0974-4E9F-8546-C6B9858F1FE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA4B23E1-0974-4E9F-8546-C6B9858F1FE2}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
