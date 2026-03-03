@@ -1,0 +1,117 @@
+# Получить все задачи
+curl http://localhost:3000/api/users/
+
+
+StatusCode        : 200
+StatusDescription : OK
+Content           : [{"id":1,"name":"Danil","age":31},{"id":2,"name":"Ludmila","age":30}]
+RawContent        : HTTP/1.1 200 OK
+                    Connection: keep-alive
+                    Keep-Alive: timeout=5
+                    Content-Length: 69
+                    Content-Type: application/json; charset=utf-8
+                    Date: Tue, 03 Mar 2026 19:39:47 GMT
+                    ETag: W/"45-UVJE4bSvAU9q8RMbuN4M...
+Forms             : {}
+Headers           : {[Connection, keep-alive], [Keep-Alive, timeout=5], [Content-Length, 69], [Content-Type, application/json; charset=utf-8]...}
+Images            : {}
+InputFields       : {}
+Links             : {}
+ParsedHtml        : mshtml.HTMLDocumentClass
+RawContentLength  : 69
+
+
+
+# Получить задачу по ID
+curl http://localhost:3000/api/users/2
+
+
+StatusCode        : 200
+StatusDescription : OK
+Content           : {"id":2,"name":"Ludmila","age":30}
+RawContent        : HTTP/1.1 200 OK
+                    Connection: keep-alive
+                    Keep-Alive: timeout=5
+                    Content-Length: 34
+                    Content-Type: application/json; charset=utf-8
+                    Date: Tue, 03 Mar 2026 19:41:22 GMT
+                    ETag: W/"22-tYItvmA1mvdOLD47v7cg...
+Forms             : {}
+Headers           : {[Connection, keep-alive], [Keep-Alive, timeout=5], [Content-Length, 34], [Content-Type, application/json; charset=utf-8]...}
+Images            : {}
+InputFields       : {}
+Links             : {}
+ParsedHtml        : mshtml.HTMLDocumentClass
+RawContentLength  : 34
+
+
+# Создать задачу
+Invoke-WebRequest -Uri "http://localhost:3000/api/users/" -Method Post -ContentType "application/json" -Body '{"id":2,"name":"Andrey","age":24}'
+
+
+StatusCode        : 200
+StatusDescription : OK
+Content           : {"id":4,"name":"Andrey","age":24}
+RawContent        : HTTP/1.1 200 OK
+                    Connection: keep-alive
+                    Keep-Alive: timeout=5
+                    Content-Length: 33
+                    Content-Type: application/json; charset=utf-8
+                    Date: Tue, 03 Mar 2026 19:40:47 GMT
+                    ETag: W/"21-Aa8y5Z2WOtmYTzIMRQro...
+Forms             : {}
+Headers           : {[Connection, keep-alive], [Keep-Alive, timeout=5], [Content-Length, 33], [Content-Type, application/json; charset=utf-8]...}
+Images            : {}
+InputFields       : {}
+Links             : {}
+ParsedHtml        : mshtml.HTMLDocumentClass
+RawContentLength  : 33
+
+
+# Обновить задачу
+Invoke-WebRequest -Uri "http://localhost:3000/api/users/" -Method Put -ContentType "application/json" -Body '{"id":4,"name":"Andrey","age":43}'
+
+
+StatusCode        : 200
+StatusDescription : OK
+Content           : {"id":4,"name":"Andrey","age":43}
+RawContent        : HTTP/1.1 200 OK
+                    Connection: keep-alive
+                    Keep-Alive: timeout=5
+                    Content-Length: 33
+                    Content-Type: application/json; charset=utf-8
+                    Date: Tue, 03 Mar 2026 19:42:38 GMT
+                    ETag: W/"21-SU/obOnX2mAKtdLu7daX...
+Forms             : {}
+Headers           : {[Connection, keep-alive], [Keep-Alive, timeout=5], [Content-Length, 33], [Content-Type, application/json; charset=utf-8]...}
+Images            : {}
+InputFields       : {}
+Links             : {}
+ParsedHtml        : mshtml.HTMLDocumentClass
+RawContentLength  : 33
+
+
+
+
+
+# Удалить задачу
+Invoke-WebRequest -Uri "http://localhost:3000/api/users/1" -Method Delete -ContentType "application/json"
+
+
+StatusCode        : 200
+StatusDescription : OK
+Content           : true
+RawContent        : HTTP/1.1 200 OK
+                    Connection: keep-alive
+                    Keep-Alive: timeout=5
+                    Content-Length: 4
+                    Content-Type: application/json; charset=utf-8
+                    Date: Tue, 03 Mar 2026 19:43:10 GMT
+                    ETag: W/"4-X/5TO4MPCKAyY0ipFgr6/I...
+Forms             : {}
+Headers           : {[Connection, keep-alive], [Keep-Alive, timeout=5], [Content-Length, 4], [Content-Type, application/json; charset=utf-8]...}
+Images            : {}
+InputFields       : {}
+Links             : {}
+ParsedHtml        : mshtml.HTMLDocumentClass
+RawContentLength  : 4

@@ -1,0 +1,120 @@
+# Получить все задачи
+curl http://localhost:3000/api/tasks/
+
+
+StatusCode        : 200
+StatusDescription : OK
+Content           : [{"id":1,"title":"Изучить Express","completed":false,"createdAt":1772565517691},{"id":2,"title":"Написать API","completed":fals
+                    e,"createdAt":1772565517691}]
+RawContent        : HTTP/1.1 200 OK
+                    Connection: keep-alive
+                    Keep-Alive: timeout=5
+                    Content-Length: 171
+                    Content-Type: application/json; charset=utf-8
+                    Date: Tue, 03 Mar 2026 19:24:00 GMT
+                    ETag: W/"ab-UDoKKWCfDUrPp6Cnp8W...
+Forms             : {}
+Headers           : {[Connection, keep-alive], [Keep-Alive, timeout=5], [Content-Length, 171], [Content-Type, application/json; charset=utf-8]...}
+Images            : {}
+InputFields       : {}
+Links             : {}
+ParsedHtml        : mshtml.HTMLDocumentClass
+RawContentLength  : 171
+
+
+# Получить задачу по ID
+curl http://localhost:3000/api/tasks/2
+
+
+StatusCode        : 200
+StatusDescription : OK
+Content           : {"id":2,"title":"Написать API","completed":false,"createdAt":1772565517691}
+RawContent        : HTTP/1.1 200 OK
+                    Connection: keep-alive
+                    Keep-Alive: timeout=5
+                    Content-Length: 83
+                    Content-Type: application/json; charset=utf-8
+                    Date: Tue, 03 Mar 2026 19:25:35 GMT
+                    ETag: W/"53-APntE32DfE4BCYjbYar/...
+Forms             : {}
+Headers           : {[Connection, keep-alive], [Keep-Alive, timeout=5], [Content-Length, 83], [Content-Type, application/json; charset=utf-8]...}
+Images            : {}
+InputFields       : {}
+Links             : {}
+ParsedHtml        : mshtml.HTMLDocumentClass
+RawContentLength  : 83
+
+
+# Создать задачу
+Invoke-WebRequest -Uri "http://localhost:3000/api/tasks/" -Method Post -ContentType "application/json" -Body '{"id":1,"title":"Express","completed":false,"createdAt":1772561513537}'
+
+
+StatusCode        : 200
+StatusDescription : OK
+Content           : {"id":4,"title":"Express","completed":false,"createdAt":1772566444189}
+RawContent        : HTTP/1.1 200 OK
+                    Connection: keep-alive
+                    Keep-Alive: timeout=5
+                    Content-Length: 78
+                    Content-Type: application/json; charset=utf-8
+                    Date: Tue, 03 Mar 2026 19:34:04 GMT
+                    ETag: W/"4e-/YSokrHh+x4EmUdXiis5...
+Forms             : {}
+Headers           : {[Connection, keep-alive], [Keep-Alive, timeout=5], [Content-Length, 78], [Content-Type, application/json; charset=utf-8]...}
+Images            : {}
+InputFields       : {}
+Links             : {}
+ParsedHtml        : mshtml.HTMLDocumentClass
+RawContentLength  : 78
+
+
+
+
+# Обновить задачу
+Invoke-WebRequest -Uri "http://localhost:3000/api/tasks/" -Method Put -ContentType "application/json" -Body '{"id":4,"title":"Express 2","completed":false,"createdAt":1772561513537}'
+
+
+StatusCode        : 200
+StatusDescription : OK
+Content           : {"id":4,"title":"Express 2","completed":false,"createdAt":1772566444189}
+RawContent        : HTTP/1.1 200 OK
+                    Connection: keep-alive
+                    Keep-Alive: timeout=5
+                    Content-Length: 72
+                    Content-Type: application/json; charset=utf-8
+                    Date: Tue, 03 Mar 2026 19:35:49 GMT
+                    ETag: W/"48-qPp/JB36C5wJc7yTaSDV...
+Forms             : {}
+Headers           : {[Connection, keep-alive], [Keep-Alive, timeout=5], [Content-Length, 72], [Content-Type, application/json; charset=utf-8]...}
+Images            : {}
+InputFields       : {}
+Links             : {}
+ParsedHtml        : mshtml.HTMLDocumentClass
+RawContentLength  : 72
+
+
+
+
+# Удалить задачу
+Invoke-WebRequest -Uri "http://localhost:3000/api/tasks/1" -Method Delete -ContentType "application/json"
+
+
+StatusCode        : 200
+StatusDescription : OK
+Content           : true
+RawContent        : HTTP/1.1 200 OK
+                    Connection: keep-alive
+                    Keep-Alive: timeout=5
+                    Content-Length: 4
+                    Content-Type: application/json; charset=utf-8
+                    Date: Tue, 03 Mar 2026 19:37:12 GMT
+                    ETag: W/"4-X/5TO4MPCKAyY0ipFgr6/I...
+Forms             : {}
+Headers           : {[Connection, keep-alive], [Keep-Alive, timeout=5], [Content-Length, 4], [Content-Type, application/json; charset=utf-8]...}
+Images            : {}
+InputFields       : {}
+Links             : {}
+ParsedHtml        : mshtml.HTMLDocumentClass
+RawContentLength  : 4
+
+
