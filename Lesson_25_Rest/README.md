@@ -13,5 +13,5 @@
 	* Добавить базовые тесты для контроллеров/сервисов.
 
 1. <b>Результат на PowerShell:</b>
-	* ![result_1](https://github.com/prowokatorkraft/Otus_javascript_professional/blob/master/lesson_25_rest/public/TaskTests.txt?raw=true)</br>
-	* ![result_2](https://github.com/prowokatorkraft/Otus_javascript_professional/blob/master/lesson_25_rest/public/UserTests.txt?raw=true)</br>
+	* ![result_1](https://github.com/prowokatorkraft/Otus_javascript_professional/blob/master/Lesson_25_Rest/public/TaskTests.txt)</br>
+	* ![result_2](https://github.com/prowokatorkraft/Otus_javascript_professional/blob/master/Lesson_25_Rest/public/UserTests.txt?)</br>
