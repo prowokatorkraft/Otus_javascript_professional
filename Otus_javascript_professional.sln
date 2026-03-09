@@ -25,6 +25,8 @@ Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "Lesson_23_Next", "Lesson_23
 EndProject
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "Lesson_25_Rest", "Lesson_25_Rest\Lesson_25_Rest.njsproj", "{8062FAFC-B777-4C08-9C14-6B88B73D36F4}"
 EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "Lesson_29_Nest", "Lesson_29_Nest\Lesson_29_Nest.njsproj", "{AD3EFBFA-CA8C-481C-9112-7CD7BE2295A8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{8062FAFC-B777-4C08-9C14-6B88B73D36F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8062FAFC-B777-4C08-9C14-6B88B73D36F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8062FAFC-B777-4C08-9C14-6B88B73D36F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD3EFBFA-CA8C-481C-9112-7CD7BE2295A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD3EFBFA-CA8C-481C-9112-7CD7BE2295A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD3EFBFA-CA8C-481C-9112-7CD7BE2295A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD3EFBFA-CA8C-481C-9112-7CD7BE2295A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
